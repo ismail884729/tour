@@ -1,0 +1,103 @@
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="#">HASSAN TOURS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tour-packages">Tour Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/booking">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="container my-5">
+  
+    
+    <!-- Popular Destinations Section -->
+    <h2 class="text-center mb-4">Popular Destinations</h2>
+    <div class="row">
+      <!-- Destination Cards -->
+      <div class="col-md-4 mb-4" *ngFor="let destination of destinations">
+        <div class="card h-100 shadow-sm">
+          <img
+            src="{{ destination.imageUrl }}"
+            class="card-img-top"
+            alt="{{ destination.name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ destination.name }}</h5>
+            <p class="card-text">{{ destination.description }}</p>
+            <a [routerLink]="['/destination', destination.id]" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- More Details Section -->
+    <div class="more-details my-5">
+      <h3 class="text-center mb-4">Why Choose Us?</h3>
+      <p class="text-center">
+        We provide personalized travel packages and exceptional services to cater to your dream vacation. With years of experience, we guarantee a memorable adventure. Our team ensures every trip is tailored to your needs and preferences.
+      </p>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h4>Expert Guides</h4>
+          <p>Our guides are highly experienced and knowledgeable to offer you a great experience.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Best Prices</h4>
+          <p>We provide affordable packages without compromising quality and comfort.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Safe Travel</h4>
+          <p>Your safety is our priority, with secure travel options and 24/7 support.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Section -->
+    <footer class="bg-light py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>About Us</h5>
+            <p>
+              We are a leading tourism company offering the best travel packages. Our goal is to make your travel experience unforgettable, providing world-class services and ensuring your satisfaction at every step.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="/">Home</a></li>
+              <li><a href="/tour-packages">Tour Packages</a></li>
+              <li><a href="/booking">Booking</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>Email: hassantours99gmail.com</li>
+              <li>Phone: 0773302955</li>
+              <li>zanzibar town: forodhani,  zanzibar City, tanzania</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center py-3">
+          &copy; 2024 Tourism Site. All rights reserved.
+        </div>
+      </div>
+    </footer>
+</div>

@@ -1,0 +1,111 @@
+<!-- Menu Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="#">Tourism Site</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tour-packages">Tour Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/booking">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery">Gallery</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<!-- Tour Packages Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Available Tour Packages</h2>
+
+  <!-- Filter Section -->
+  <form [formGroup]="filterForm" (ngSubmit)="applyFilters()">
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <label for="location">Filter by Location</label>
+        <select id="location" formControlName="location" class="form-control">
+          <option value="">All Locations</option>
+          <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="type">Filter by Tour Type</label>
+        <select id="type" formControlName="type" class="form-control">
+          <option value="">All Types</option>
+          <option *ngFor="let type of tourTypes" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label for="priceRange">Filter by Price Range</label>
+        <select id="priceRange" formControlName="priceRange" class="form-control">
+          <option value="">All Prices</option>
+          <option *ngFor="let range of priceRanges" [value]="range">{{ range }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-primary mt-4">Apply Filters</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Tour Packages Display -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let package of filteredPackages">
+      <div class="card h-100 shadow-sm">
+        <img [src]="package.imageUrl" class="card-img-top" [alt]="package.name" />
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">{{ package.description }}</p>
+          <p class="card-text"><strong>Price: </strong> ${{ package.price }}</p>
+          <a [routerLink]="['/tour', package.id]" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4">
+        <h5 class="text-uppercase">Tourism Site</h5>
+        <p>
+          Discover the world with our exclusive tour packages. Plan your trip today and create unforgettable memories.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="text-dark">Home</a></li>
+          <li><a href="#" class="text-dark">Tour Packages</a></li>
+          <li><a href="#" class="text-dark">Booking</a></li>
+          <li><a href="#" class="text-dark">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="text-uppercase">Contact Us</h5>
+        <p>123 Travel Lane, Wanderlust City</p>
+        <p>Email: contact.com</p>
+        <p>Phone: +123-456-7890</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3 bg-light" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Tourism Site. All rights reserved.
+  </div>
+</footer>

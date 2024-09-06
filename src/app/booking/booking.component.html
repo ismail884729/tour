@@ -1,0 +1,88 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <a class="navbar-brand" href="#">Tourism Site</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tour-packages">Tour Packages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/booking">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Booking Form -->
+  <div class="container">
+    <h2 class="text-center mb-4">Book Your Tour</h2>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userId">User ID</label>
+        <input id="userId" formControlName="userId" class="form-control" type="number" />
+      </div>
+      <div class="form-group">
+        <label for="tourId">Tour ID</label>
+        <input id="tourId" formControlName="tourId" class="form-control" type="number" />
+      </div>
+      <div class="form-group">
+        <label for="accommodationId">Accommodation ID (Optional)</label>
+        <input id="accommodationId" formControlName="accommodationId" class="form-control" type="number" />
+      </div>
+      <div class="form-group">
+        <label for="bookingDate">Booking Date</label>
+        <input id="bookingDate" formControlName="bookingDate" class="form-control" type="date" />
+      </div>
+      <div class="form-group">
+        <label for="numberOfPeople">Number of People</label>
+        <input id="numberOfPeople" formControlName="numberOfPeople" class="form-control" type="number" />
+      </div>
+      <div class="form-group">
+        <label for="specialRequests">Special Requests</label>
+        <textarea id="specialRequests" formControlName="specialRequests" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer class="bg-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>About Us</h5>
+          <p>We are a leading tourism company offering the best travel packages. Our goal is to make your travel experience unforgettable, providing world-class services and ensuring your satisfaction at every step.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tour-packages">Tour Packages</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li>Email: infocom</li>
+            <li>Phone: +123 456 7890</li>
+            <li>Location: 123 Main Street, City, Country</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center py-3">
+        &copy; 2024 Tourism Site. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  

@@ -7,6 +7,12 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./tour-packages.component.css']
 })
 export class TourPackagesComponent implements OnInit {
+
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   filterForm: FormGroup;
   tourPackages = [
     {

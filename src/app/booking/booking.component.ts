@@ -9,6 +9,11 @@ import { Booking } from '../booking.model';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent {
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
   bookingForm: FormGroup;
 
   constructor(private fb: FormBuilder, private bookingService: BookingService) {

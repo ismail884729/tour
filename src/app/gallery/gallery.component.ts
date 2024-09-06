@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   destinations = [
     {

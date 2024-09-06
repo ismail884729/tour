@@ -14,7 +14,7 @@ export class GalleryComponent {
 
   destinations = [
     {
-      name: 'Paris, France',
+      name: 'Mnemba Island',
       coverImage: 'assets/images/p3.jpeg',
       images: [
         'assets/images/p3.jpeg',
@@ -23,8 +23,8 @@ export class GalleryComponent {
       ]
     },
     {
-      name: 'Swiss Alps, Switzerland',
-      coverImage: 'assets/images/p1.jpeg',
+      name: 'Aquarium',
+      coverImage: 'assets/images/p3.jpeg',
       images: [
         'assets/images/p3.jpeg',
         'assets/images/p3.jpeg',
@@ -32,16 +32,88 @@ export class GalleryComponent {
       ]
     },
     {
-      name: 'Maui, Hawaii',
-      coverImage: 'assets/images/p4.jpeg',
+      name: 'Stone Town',
+      coverImage: 'assets/images/p3.jpeg',
       images: [
         'assets/images/p3.jpeg',
         'assets/images/p3.jpeg',
         'assets/images/p3.jpeg'
       ]
     },
-    // Add more destinations as needed
+    {
+      name: 'Spice Farms',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Nakupenda Sandbank',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Prison Island',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Jozani Forest',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Safari Blue',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Malum Cave',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Sunset',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    },
+    {
+      name: 'Sunset Cruise',
+      coverImage: 'assets/images/p3.jpeg',
+      images: [
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg',
+        'assets/images/p3.jpeg'
+      ]
+    }
   ];
+  
 
   selectedDestination: any = null;
 

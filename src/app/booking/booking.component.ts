@@ -10,6 +10,7 @@ import { Booking } from '../booking.model';
 })
 export class BookingComponent {
   isMenuOpen = false;
+  contactInfo: any;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -41,5 +42,28 @@ export class BookingComponent {
         }
       );
     }
+  }
+
+  ngOnInit(): void {
+    this.loadContactInfo();
+  }
+
+  loadContactInfo() {
+    const jsonData = `
+      {
+        "Phone": "0773302955",
+        "Email": "hassantours99@gmail.com",
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Hassan Tours",
+        "url": "https://yourwebsite.com",
+        "description": "Book your next adventure with Hassan Tours. Explore exciting destinations around the world.",
+        "logo": "https://example.com/path-to-logo.png",
+        "sameAs": ["https://www.facebook.com/hassantours", "https://twitter.com/hassantours"]
+      }
+    `;
+
+    // Parse the JSON string
+    this.contactInfo = JSON.parse(jsonData);
   }
 }

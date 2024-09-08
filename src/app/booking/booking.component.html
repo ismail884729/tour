@@ -1,8 +1,9 @@
 <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">HASSAN TOURS</a>
   <button class="navbar-toggler" type="button" (click)="toggleMenu()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">HASSAN TOURS</a>
+ 
 </nav>
 
 <!-- Overlay that closes the sidebar when clicked -->
@@ -24,15 +25,15 @@
     <h2 class="text-center mb-4">Book Your Tour</h2>
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="userId">User ID</label>
+        <label for="userId">Full name</label>
         <input id="userId" formControlName="userId" class="form-control" type="number" />
       </div>
       <div class="form-group">
-        <label for="tourId">Tour ID</label>
+        <label for="tourId">Tour name</label>
         <input id="tourId" formControlName="tourId" class="form-control" type="number" />
       </div>
       <div class="form-group">
-        <label for="accommodationId">Accommodation ID (Optional)</label>
+        <label for="accommodationId">Accommodation (Optional)</label>
         <input id="accommodationId" formControlName="accommodationId" class="form-control" type="number" />
       </div>
       <div class="form-group">
@@ -47,9 +48,11 @@
         <label for="specialRequests">Special Requests</label>
         <textarea id="specialRequests" formControlName="specialRequests" class="form-control"></textarea>
       </div>
+      <br>
       <button type="submit" class="btn btn-primary">Book Now</button>
     </form>
   </div>
+  
   
   <!-- Footer Section -->
   <footer class="bg-light py-4 mt-5">
@@ -71,14 +74,15 @@
         <div class="col-md-3">
           <h5>Contact Us</h5>
           <ul class="list-unstyled">
-            <li>Email: infocom</li>
-            <li>Phone: +123 456 7890</li>
-            <li>Location: 123 Main Street, City, Country</li>
+            <li>Phone: {{ contactInfo.Phone }}</li>
+            <li>Email: {{ contactInfo.Email }}</li>
+            <li>Address: Forodhani, Zanzibar City, Tanzania</li>
           </ul>
         </div>
+        
       </div>
       <div class="text-center py-3">
-        &copy; 2024 Tourism Site. All rights reserved.
+        &copy; 2024 hassantours. All rights reserved.
       </div>
     </div>
   </footer>

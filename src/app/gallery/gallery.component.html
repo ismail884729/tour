@@ -1,9 +1,10 @@
 <!-- Menu Navigation Bar -->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light"> 
+  <a class="navbar-brand" href="#">HASSAN TOURS</a>
   <button class="navbar-toggler" type="button" (click)="toggleMenu()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">HASSAN TOURS</a>
+  
 </nav>
 
 <!-- Overlay that closes the sidebar when clicked -->
@@ -102,19 +103,20 @@
         </div>
   
         <!-- Contact Section -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contact Us</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="#" class="text-dark">Email: infocom</a></li>
-            <li><a href="#" class="text-dark">Phone: +123 456 7890</a></li>
-            <li><a href="#" class="text-dark">Location: Main Street, City, Country</a></li>
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li>Phone: {{ contactInfo.Phone }}</li>
+            <li>Email: {{ contactInfo.Email }}</li>
+            <li>Address: Forodhani, Zanzibar City, Tanzania</li>
           </ul>
         </div>
+        
       </div>
     </div>
   
     <div class="text-center p-3 bg-dark text-white">
-      © 2024 Tourism Site - All Rights Reserved
+      &copy; 2024 hassantours. All rights reserved.
     </div>
   </footer>
   

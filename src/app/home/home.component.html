@@ -1,9 +1,10 @@
 <!-- Navigation Bar with Toggle Button -->
 <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">HASSAN TOURS</a>
   <button class="navbar-toggler" type="button" (click)="toggleMenu()">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">HASSAN TOURS</a>
+  
 </nav>
 
 <!-- Overlay that closes the sidebar when clicked -->
@@ -21,6 +22,22 @@
 
 
 <div class="container my-5">
+  <!-- Introduction Section -->
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1 class="display-4 font-weight-bold mb-3">Welcome to Hassan Tours</h1>
+      <p class="lead text-muted">
+        With over a decade of experience, Hassan Tours is dedicated to providing unforgettable travel experiences. 
+        Whether you're seeking adventure, relaxation, or cultural exploration, we have the perfect tour for you. 
+        Our team of experienced guides ensures that every moment of your trip is filled with excitement and joy.
+      </p>
+      <p class="lead text-muted">
+        Explore the beauty of Tanzania and beyond with us. We offer exclusive packages that cater to all your travel needs, 
+        ensuring a memorable journey from start to finish.
+      </p>
+    </div>
+  </div>
+
   <!-- Popular Destinations Section -->
   <h2 class="text-center mb-4">Popular Destinations</h2>
   <div class="row">
@@ -31,11 +48,13 @@
         <div class="card-body">
           <h5 class="card-title">{{ destination.name }}</h5>
           <p class="card-text">{{ destination.description }}</p>
-          <a [routerLink]="['/destination', destination.id]" class="btn btn-primary">Learn More</a>
+          <a [routerLink]="['/booking']" class="btn btn-primary">Book Now</a>
         </div>
       </div>
     </div>
   </div>
+</div>
+<div>
 
   <!-- More Details Section -->
   <div class="more-details my-5">
@@ -84,14 +103,15 @@
         <div class="col-md-3">
           <h5>Contact Us</h5>
           <ul class="list-unstyled">
-            <li>Email: hassantours99gmail.com</li>
-            <li>Phone: 0773302955</li>
+            <li>Phone: {{ contactInfo.Phone }}</li>
+            <li>Email: {{ contactInfo.Email }}</li>
             <li>Address: Forodhani, Zanzibar City, Tanzania</li>
           </ul>
         </div>
+        
       </div>
       <div class="text-center py-3">
-        &copy; 2024 Hassan Tours. All rights reserved.
+        &copy; 2024 hassantours. All rights reserved.
       </div>
     </div>
   </footer>

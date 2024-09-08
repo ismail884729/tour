@@ -5,22 +5,61 @@
   <title>Hassan Tours</title>
   <base href="/">
 
-  <!-- Meta tags for responsiveness -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta tags for responsiveness and SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+  <meta name="description" content="Discover the best travel deals and tours with Hassan Tours. Your adventure awaits!">
+  <meta name="keywords" content="travel, tours, adventure, holiday, bookings, Hassan Tours">
+  <meta name="author" content="Hassan Tours">
+
+  <!-- Preload Font Awesome for faster loading -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
   
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
   
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <!-- Open Graph Meta for Social Media -->
+  <meta property="og:title" content="Hassan Tours - Explore the World">
+  <meta property="og:description" content="Book your next adventure with Hassan Tours. Explore exciting destinations around the world.">
+  <meta property="og:image" content="https://example.com/path-to-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hassan Tours">
+  <meta name="twitter:description" content="Explore exciting destinations with Hassan Tours.">
+  <meta name="twitter:image" content="https://example.com/path-to-image.jpg">
+  
   <!-- jQuery and Bootstrap JS (latest version) -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  
+  <!-- Fallback for Bootstrap CDN -->
+  <script>
+    if (typeof $.fn.modal === 'undefined') {
+      document.write('<script src="/assets/js/bootstrap.min.js"><\/script>');
+    }
+  </script>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Structured Data for SEO (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Hassan Tours",
+    "url": "https://yourwebsite.com",
+    "description": "Book your next adventure with Hassan Tours. Explore exciting destinations around the world.",
+    "logo": "https://example.com/path-to-logo.png",
+    "sameAs": ["https://www.facebook.com/hassantours", "https://twitter.com/hassantours"]
+  }
+  </script>
+
 </head>
 <body>
   <app-root></app-root>

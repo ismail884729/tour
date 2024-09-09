@@ -1,10 +1,9 @@
 export interface Booking {
-    id?: number;
-    userId: number;
-    tourId: number;
-    accommodationId?: number;
-    bookingDate: Date;
-    numberOfPeople: number;
-    specialRequests?: string;
-  }
-  
+  fullName: string;
+  place: string;
+  phoneNumber: string;
+  email: string;
+  bookingDate: string;
+  numberOfPeople: number;
+  specialRequests?: string;
+}

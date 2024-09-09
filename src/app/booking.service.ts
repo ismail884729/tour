@@ -7,22 +7,12 @@ import { Booking } from './booking.model';
   providedIn: 'root'
 })
 export class BookingService {
-  private apiUrl = 'http://localhost:8080/api/bookings'; // Update with your API URL
 
-  constructor(private http: HttpClient) {}
+  private apiUrl = 'http://localhost:3000/send-booking'; // Update with Node.js API URL
 
-  // Create a new booking
-  createBooking(booking: Booking): Observable<Booking> {
-    return this.http.post<Booking>(`${this.apiUrl}/add`, booking);
-  }
+  constructor(private http: HttpClient) { }
 
-  // Get all bookings (if needed for admin or user view)
-  getBookings(): Observable<Booking[]> {
-    return this.http.get<Booking[]>(this.apiUrl);
-  }
-
-  // Get booking by ID
-  getBookingById(id: number): Observable<Booking> {
-    return this.http.get<Booking>(`${this.apiUrl}/${id}`);
+  createBooking(booking: Booking): Observable<any> {
+    return this.http.post(this.apiUrl, booking);
   }
 }

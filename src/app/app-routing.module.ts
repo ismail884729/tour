@@ -9,7 +9,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route (home page)
   { path: 'tour-packages', component: TourPackagesComponent }, // Tour packages page
-  { path: 'booking', component: BookingComponent }, // Booking page
+  { path: 'booking/:name', component: BookingComponent },// Booking page
   { path: 'gallery', component: GalleryComponent }, // Gallery page
   { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect unknown routes to home
 ];

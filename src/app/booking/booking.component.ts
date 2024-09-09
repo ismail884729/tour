@@ -19,9 +19,10 @@ export class BookingComponent {
 
   constructor(private fb: FormBuilder, private bookingService: BookingService) {
     this.bookingForm = this.fb.group({
-      userId: [null, Validators.required],
-      tourId: [null, Validators.required],
-      accommodationId: [null],
+      fullName: [null, Validators.required],
+      place: [null, Validators.required],
+      phoneNumber: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]],
       bookingDate: [null, Validators.required],
       numberOfPeople: [1, [Validators.required, Validators.min(1)]],
       specialRequests: ['']
@@ -63,7 +64,6 @@ export class BookingComponent {
       }
     `;
 
-    // Parse the JSON string
     this.contactInfo = JSON.parse(jsonData);
   }
 }

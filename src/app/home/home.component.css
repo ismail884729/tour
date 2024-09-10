@@ -196,7 +196,7 @@ footer .text-center {
   
   /* Show the sidebar when the active class is applied */
   .sidebar.active {
-    left: 0;
+    right: 0;
   }
   
   /* Overlay when the sidebar is open */

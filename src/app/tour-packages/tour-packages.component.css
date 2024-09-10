@@ -149,10 +149,24 @@ footer .text-center {
     padding-top: 20px;
     font-size: 0.9rem;
 }
+
+.offcanvas {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .offcanvas.show {
+    transform: translateX(0);
+  }
+  
+  .offcanvas-start {
+    transform: translateX(-100%);
+  }
+/* The sidebar menu */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
+    right: -250px;
     width: 250px;
     height: 100%;
     background-color: #343a40;
@@ -182,7 +196,7 @@ footer .text-center {
   
   /* Show the sidebar when the active class is applied */
   .sidebar.active {
-    left: 0;
+    right: 0;
   }
   
   /* Overlay when the sidebar is open */
@@ -200,3 +214,76 @@ footer .text-center {
   .overlay.active {
     display: block;
   }
+    
+  /* Introduction Section Styles */
+.container .display-4 {
+    color: #276ace;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container .lead {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.container .lead.text-muted {
+    font-weight: 300;
+    color: #777;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Card Styles for Popular Destinations */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.btn-primary {
+    background-color: #276ace;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

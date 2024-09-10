@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/node:14.17 # Use Node.js 14 or another version you need
+      - image: circleci/node:20.10.0 # Use Node.js 14 or another version you need
     working_directory: ~/tour
 
     steps:

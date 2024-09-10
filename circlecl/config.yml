@@ -1,0 +1,31 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14.17 # Use Node.js 14 or another version you need
+    working_directory: ~/tour
+
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - run:
+          name: Build Angular App
+          command: npm run build --prod
+
+      - run:
+          name: Install Surge
+          command: npm install --global surge
+
+      - run:
+          name: Deploy to Surge
+          command: surge --project ./dist/hassantour --hassantour198.surge.sh
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build

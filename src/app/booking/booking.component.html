@@ -27,15 +27,15 @@
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="userId">Full name</label>
-        <input id="userId" formControlName="userId" class="form-control" type="number" />
+        <input id="userId" formControlName="userId" class="form-control" type="text" />
       </div>
       <div class="form-group">
         <label for="tourId">Tour name</label>
-        <input id="tourId" formControlName="tourId" class="form-control" type="number" />
+        <input id="tourId" formControlName="tourId" class="form-control" type="text" />
       </div>
       <div class="form-group">
         <label for="accommodationId">Accommodation (Optional)</label>
-        <input id="accommodationId" formControlName="accommodationId" class="form-control" type="number" />
+        <input id="accommodationId" formControlName="accommodationId" class="form-control" type="text" />
       </div>
       <div class="form-group">
         <label for="bookingDate">Booking Date</label>
